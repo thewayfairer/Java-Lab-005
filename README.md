@@ -11,6 +11,18 @@ This uses the **new** operator and the **Scanner(System.in)** constructor call t
 Well this week, you are going to use your new knowledge about Methods and Constructors to create your first classes, and its methods. Thus, you may not be familiar with another term quite yet, and that is **instance variables.** You know what variables are, and instance variables are similar, they are just defined within the **class** but outside the **methods.** They are typically defined at the top of the class, and they are **NON-static** variables that dictate what **state** an **object** of that **class type** is in. Take the first class you will create for example, a Dice class. You can have many dice, and that dice can have **n** sides (at least 2). Thus, an instance variable for a Dice class will be **sides,** and the constructor method for the Dice class will take the number of **sides** as a parameter, so you can initialize the object's number of sides.
 
 ```java
+public class Dice {
+    private int sideFacingUp;
+    private int sides;
+    private Random randomGenerator;
+
+    // Constructor
+    public Dice(int sides) {
+        this.sides = sides;  // this is a keyword for "this" object that's being created.
+    }
+
+}
+
 Dice d1 = new Dice(6);
 Dice d2 = new Dice(20);
 ```
